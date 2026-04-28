@@ -37,3 +37,24 @@ Solutions are in `coding-exercises/game_solutions/`.
 - [MaaS Code Assistant Quickstart](https://docs.redhat.com/en/learn/ai-quickstarts/rh-maas-code-assistant)
 - [Continue — Open-Source AI Code Assistant](https://www.continue.dev/)
 - [RHOAI3 Coding Demo](https://github.com/adnan-drina/rhoai3-coding-demo)
+
+## Using OpenCode (Terminal-based AI Assistant)
+
+OpenCode is a model-neutral CLI tool installed automatically in the workspace. Use it for terminal-based AI tasks:
+
+```bash
+# Launch OpenCode
+opencode
+
+# Connect to your MaaS model using /connect command
+# Select "OpenAI Compatible" provider
+# Enter your MaaS endpoint and API key
+```
+
+OpenCode is great for:
+- Reviewing git diffs and commit history
+- Analyzing project structure
+- Multi-file refactoring from the terminal
+- Code generation and scaffolding
+
+See [OpenCode documentation](https://github.com/anomalyco/opencode) for more details.
