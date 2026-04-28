@@ -8,6 +8,8 @@ models:
     apiBase: "YOUR_MAAS_ROUTE/v1"
     apiKey: "YOUR_API_KEY"
     contextLength: 131072
+    capabilities:
+      - tool_use
     defaultCompletionOptions:
       reasoning: true
       maxTokens: 4096
