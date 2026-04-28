@@ -7,6 +7,10 @@ models:
     model: "nemotron-3-nano-30b-a3b"
     apiBase: "YOUR_MAAS_ROUTE/v1"
     apiKey: "YOUR_API_KEY"
+    requestOptions:
+      extraBodyProperties:
+        chat_template_kwargs:
+          enable_thinking: false
 context:
   - provider: code
   - provider: docs
