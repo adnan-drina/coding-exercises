@@ -1,28 +1,48 @@
 {
   "provider": {
     "nemotron": {
-      "models": { "nemotron-3-nano-30b-a3b": {} },
+      "models": {
+        "nemotron-3-nano-30b-a3b": {
+          "name": "NVIDIA Nemotron (Local GPU)",
+          "limit": { "context": 131072, "output": 4096 }
+        }
+      },
       "options": {
         "apiKey": "YOUR_API_KEY",
         "baseURL": "YOUR_MAAS_ROUTE/maas/nemotron-3-nano-30b-a3b/v1"
       }
     },
     "gpt-oss": {
-      "models": { "gpt-oss-20b": {} },
+      "models": {
+        "gpt-oss-20b": {
+          "name": "OpenAI gpt-oss-20b (Local GPU)",
+          "limit": { "context": 8192, "output": 4096 }
+        }
+      },
       "options": {
         "apiKey": "YOUR_API_KEY",
         "baseURL": "YOUR_MAAS_ROUTE/maas/gpt-oss-20b/v1"
       }
     },
     "gpt-4o": {
-      "models": { "gpt-4o": {} },
+      "models": {
+        "gpt-4o": {
+          "name": "OpenAI GPT-4o (External)",
+          "limit": { "context": 128000, "output": 16384 }
+        }
+      },
       "options": {
         "apiKey": "YOUR_API_KEY",
         "baseURL": "YOUR_MAAS_ROUTE/maas/gpt-4o/v1"
       }
     },
     "gpt-4o-mini": {
-      "models": { "gpt-4o-mini": {} },
+      "models": {
+        "gpt-4o-mini": {
+          "name": "OpenAI GPT-4o Mini (External)",
+          "limit": { "context": 128000, "output": 16384 }
+        }
+      },
       "options": {
         "apiKey": "YOUR_API_KEY",
         "baseURL": "YOUR_MAAS_ROUTE/maas/gpt-4o-mini/v1"
