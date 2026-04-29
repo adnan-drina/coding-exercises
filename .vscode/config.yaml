@@ -47,17 +47,18 @@ models:
     defaultCompletionOptions:
       maxTokens: 4096
 
-  # GPT-5 Codex — NOT available through MaaS Gateway (payload-processing only supports
-  # /chat/completions, but GPT-5 Codex requires /v1/responses). Available via MaaS
-  # API key for direct API access. To use in Continue, connect directly to OpenAI:
-  #
-  # - name: OpenAI GPT-5 Codex (direct)
-  #   provider: openai
-  #   model: "gpt-5-codex"
-  #   apiKey: "YOUR_OPENAI_API_KEY"
-  #   contextLength: 128000
-  #   capabilities:
-  #     - tool_use
+  # GPT-5 Codex — uses /v1/responses API via dedicated MaaS route with ext_proc bypass.
+  # Authenticates with OpenShift token (not sk-oai-* key). In Dev Spaces, get your
+  # token with: oc whoami -t
+  # Note: apiBase has NO /v1 suffix — Continue appends /v1/responses automatically.
+  - name: OpenAI GPT-5 Codex (via MaaS)
+    provider: openai
+    model: "gpt-5-codex"
+    apiBase: "YOUR_MAAS_ROUTE/maas/gpt-5-codex"
+    apiKey: "YOUR_OC_TOKEN"
+    contextLength: 128000
+    capabilities:
+      - tool_use
 
 context:
   - provider: code
