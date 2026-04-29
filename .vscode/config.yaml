@@ -2,7 +2,7 @@ name: MaaS Code Assistant
 version: 1.0.0
 schema: v1
 models:
-  # Local GPU models (Playground + API compatible)
+  # Local GPU models (private, on-cluster)
   - name: NVIDIA Nemotron 3 Nano 30B-A3B
     provider: openai
     model: "nemotron-3-nano-30b-a3b"
@@ -24,7 +24,7 @@ models:
     defaultCompletionOptions:
       maxTokens: 4096
 
-  # External OpenAI models (via MaaS Gateway with credential injection)
+  # External OpenAI models (via MaaS Gateway — credential injection handles OpenAI auth)
   - name: OpenAI GPT-4o
     provider: openai
     model: "gpt-4o"
@@ -46,6 +46,16 @@ models:
       - tool_use
     defaultCompletionOptions:
       maxTokens: 4096
+
+  # GPT-5 Codex — uses /v1/responses API automatically (provider: openai handles this)
+  - name: OpenAI GPT-5 Codex
+    provider: openai
+    model: "gpt-5-codex"
+    apiBase: "YOUR_MAAS_ROUTE/maas/gpt-5-codex"
+    apiKey: "YOUR_API_KEY"
+    contextLength: 128000
+    capabilities:
+      - tool_use
 
 context:
   - provider: code
