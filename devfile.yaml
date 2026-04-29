@@ -19,7 +19,7 @@ commands:
       commandLine: |
         mkdir -p ~/.continue ~/.opencode
         cp /projects/coding-exercises/.vscode/config.yaml ~/.continue/config.yaml
-        cp /projects/coding-exercises/.opencode/config.json ~/.opencode/config.json
+        cp /projects/coding-exercises/.opencode/opencode.json ~/.opencode/opencode.json
         echo ""
         echo "=== AI Code Assistant Setup ==="
         echo ""
@@ -31,14 +31,13 @@ commands:
         echo "  2. Edit ~/.continue/config.yaml"
         echo "     - Replace YOUR_MAAS_ROUTE with: https://maas.<cluster-domain>"
         echo "     - Replace YOUR_API_KEY with your generated API key"
-        echo "  3. Edit ~/.opencode/config.json (same placeholders)"
+        echo "  3. Edit ~/.opencode/opencode.json (same placeholders)"
         echo ""
-        echo "Available models:"
+        echo "Available models (4):"
         echo "  nemotron-3-nano-30b-a3b  (local GPU, recommended for coding)"
         echo "  gpt-oss-20b              (local GPU)"
         echo "  gpt-4o                   (OpenAI external)"
         echo "  gpt-4o-mini              (OpenAI external, fast)"
-        echo "  gpt-5-codex              (OpenAI external, API-only)"
         echo ""
       component: tooling-container
 events:
