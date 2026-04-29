@@ -1,0 +1,30 @@
+{
+  "$schema": "https://opencode.ai/config.schema.json",
+  "provider": {
+    "openai-compatible": {
+      "name": "MaaS Gateway",
+      "api_key": "YOUR_API_KEY",
+      "models": {
+        "nemotron-3-nano-30b-a3b": {
+          "name": "NVIDIA Nemotron (Local GPU)",
+          "api_url": "YOUR_MAAS_ROUTE/maas/nemotron-3-nano-30b-a3b/v1",
+          "context_length": 131072
+        },
+        "gpt-4o-mini": {
+          "name": "OpenAI GPT-4o Mini (External)",
+          "api_url": "YOUR_MAAS_ROUTE/maas/gpt-4o-mini/v1",
+          "context_length": 128000
+        },
+        "gpt-5-codex": {
+          "name": "OpenAI GPT-5 Codex (External)",
+          "api_url": "YOUR_MAAS_ROUTE/maas/gpt-5-codex/v1",
+          "context_length": 128000
+        }
+      }
+    }
+  },
+  "model": {
+    "chat": "nemotron-3-nano-30b-a3b",
+    "edit": "nemotron-3-nano-30b-a3b"
+  }
+}

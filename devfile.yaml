@@ -1,7 +1,7 @@
 schemaVersion: 2.2.0
 metadata:
   name: coding-exercises
-  description: AI-assisted coding exercises with Continue + NVIDIA Nemotron via MaaS
+  description: AI-assisted coding exercises with Continue + OpenCode via MaaS
 attributes:
   controller.devfile.io/scc: container-build
 components:
@@ -14,14 +14,33 @@ components:
       cpuLimit: "2"
       cpuRequest: 500m
 commands:
-  - id: copy-continue-config
+  - id: copy-ai-configs
     exec:
       commandLine: |
-        mkdir -p ~/.continue
+        mkdir -p ~/.continue ~/.opencode
         cp /projects/coding-exercises/.vscode/config.yaml ~/.continue/config.yaml
-        echo "Continue config copied to ~/.continue/config.yaml"
-        echo "Edit ~/.continue/config.yaml to set YOUR_MAAS_ROUTE and YOUR_API_KEY"
+        cp /projects/coding-exercises/.opencode/config.json ~/.opencode/config.json
+        echo ""
+        echo "=== AI Code Assistant Setup ==="
+        echo ""
+        echo "Continue and OpenCode configs copied."
+        echo ""
+        echo "To configure, replace placeholders in both files:"
+        echo "  1. Get your MaaS route and API key from the RHOAI dashboard"
+        echo "     (Gen AI Studio > AI asset endpoints > Models as a service)"
+        echo "  2. Edit ~/.continue/config.yaml"
+        echo "     - Replace YOUR_MAAS_ROUTE with: https://maas.<cluster-domain>"
+        echo "     - Replace YOUR_API_KEY with your generated API key"
+        echo "  3. Edit ~/.opencode/config.json (same placeholders)"
+        echo ""
+        echo "Available models:"
+        echo "  nemotron-3-nano-30b-a3b  (local GPU, recommended for coding)"
+        echo "  gpt-oss-20b              (local GPU)"
+        echo "  gpt-4o                   (OpenAI external)"
+        echo "  gpt-4o-mini              (OpenAI external, fast)"
+        echo "  gpt-5-codex              (OpenAI external, API-only)"
+        echo ""
       component: tooling-container
 events:
   postStart:
-    - copy-continue-config
+    - copy-ai-configs
