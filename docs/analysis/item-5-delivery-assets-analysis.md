@@ -15,7 +15,7 @@ Assess whether this branch is ready to add app-local delivery assets under `.tek
   - `stages/150-governed-pipeline-and-deployment/README.md`
   - `stages/155-red-hat-trusted-software-supply-chain/README.md`
   - `stages/140-golden-path-quarkus-service/README.md`
-  - `stages/140-golden-path-quarkus-service/coding-exercises-app-repo-plan.md`
+  - `stages/140-golden-path-quarkus-service/coolstore-inventory-service-app-repo-plan.md`
   - `gitops/argocd/app-of-apps/*.yaml`
 - rh-brain reference material:
   - `raw/Designing Golden Paths.md`

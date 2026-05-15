@@ -13,7 +13,7 @@ Prepare this repository as the future `coolstore-inventory-service` application 
   - `.vscode/config.yaml`
   - `.opencode/opencode.json`
 - Platform planning repository:
-  - `stages/140-golden-path-quarkus-service/coding-exercises-app-repo-plan.md`
+  - `stages/140-golden-path-quarkus-service/coolstore-inventory-service-app-repo-plan.md`
   - `stages/100-governed-developer-entry-point/README.md`
   - `stages/110-enterprise-vibe-coding-with-continue/README.md`
   - `stages/130-agentic-engineering-with-opencode/README.md`
@@ -50,7 +50,7 @@ For Item 1, add identity and task placeholders only:
 
 - `catalog-info.yaml` is intentionally preliminary and must be reviewed again in the Developer Hub metadata item.
 - `AGENTS.md` is a transition guardrail, not the final enterprise AI controls implementation.
-- The repository directory and GitHub repository may still be named `coding-exercises`, so devfile path changes are deferred.
+- The repository directory and GitHub repository may still be named `coolstore-inventory-service`, so devfile path changes are deferred.
 - The Python exercises remain in place and could still confuse discovery tools until they are archived after the Quarkus scaffold exists.
 
 ## Expected File Changes

@@ -12,7 +12,7 @@ Current status: static image pipeline drafted. This record defines the evidence 
 
 | Field | Value |
 | --- | --- |
-| Repository | `adnan-drina/coding-exercises` today; planned rename to `adnan-drina/coolstore-inventory-service` |
+| Repository | `adnan-drina/coolstore-inventory-service` |
 | Branch | `feature/coolstore-inventory-service-plan` |
 | Commit SHA | Pending delivery asset commit |
 | Human reviewer | Pending |

@@ -1,7 +1,7 @@
 schemaVersion: 2.2.0
 metadata:
-  name: coding-exercises
-  description: AI-assisted coding exercises with Continue + OpenCode via MaaS
+  name: coolstore-inventory-service
+  description: Coolstore inventory service workspace with Continue + OpenCode via MaaS
 attributes:
   controller.devfile.io/scc: container-build
 components:
@@ -18,8 +18,8 @@ commands:
     exec:
       commandLine: |
         mkdir -p ~/.continue ~/.opencode
-        cp /projects/coding-exercises/.vscode/config.yaml ~/.continue/config.yaml
-        cp /projects/coding-exercises/.opencode/opencode.json ~/.opencode/opencode.json
+        cp /projects/coolstore-inventory-service/.vscode/config.yaml ~/.continue/config.yaml
+        cp /projects/coolstore-inventory-service/.opencode/opencode.json ~/.opencode/opencode.json
         echo ""
         echo "=== AI Code Assistant Setup ==="
         echo ""

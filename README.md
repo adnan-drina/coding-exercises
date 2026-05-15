@@ -1,24 +1,24 @@
-# Coolstore Inventory Service - Planning Repository
+# Coolstore Inventory Service
 
-This repository is the transition workspace for the planned `coolstore-inventory-service` application in the "From Vibe Coding to Agentic Engineering" demo.
+This repository is the application repository for `coolstore-inventory-service` in the "From Vibe Coding to Agentic Engineering" demo.
 
-The repository currently still contains the original Python coding exercises for the RHOAI3 Private AI Code Assistant demo. Those exercises remain as legacy context until the Quarkus service scaffold exists.
+The original Python coding exercises from the RHOAI3 Private AI Code Assistant demo are archived under `legacy/python-exercises/` as legacy context. The active service source is the Quarkus project at the repository root.
 
 ## Repository Direction
 
-This repository is the candidate repository to rename from `coding-exercises` to `coolstore-inventory-service` after the direction is accepted.
+This repository is the renamed application repository for `coolstore-inventory-service`.
 
-The accepted first-demo shape is a single service repository. After the rename and scaffold, this repository should own Quarkus source, tests, Dev Spaces configuration, Continue/OpenCode configuration, Developer Hub metadata, service documentation, app-local GitOps state under `gitops/`, Pipelines-as-Code assets under `.tekton/`, and rollout, promotion, and rollback evidence.
+The accepted first-demo shape is a single service repository. This repository owns Quarkus source, tests, Dev Spaces configuration, Continue/OpenCode configuration, Developer Hub metadata, service documentation, app-local GitOps state under `gitops/`, Pipelines-as-Code assets under `.tekton/`, and rollout, promotion, and rollback evidence.
 
 See [Coolstore Inventory Service Repository Plan](docs/coolstore-inventory-service-repository-plan.md) for the proposed iteration path.
 
 ## Current Status
 
-Planning artifacts and the first Quarkus scaffold now exist for the repository reshape:
+Planning artifacts and the first Quarkus scaffold now exist:
 
 - [Item 1 app repo identity analysis](docs/analysis/item-1-app-repo-identity-analysis.md)
-- [Project AI instructions placeholder](AGENTS.md)
-- [Developer Hub catalog placeholder](catalog-info.yaml)
+- [Project AI instructions](AGENTS.md)
+- [Developer Hub catalog metadata](catalog-info.yaml)
 - [Continue README/API/test-plan alignment task](docs/tasks/continue-readme-api-test-plan-alignment.md)
 - [OpenCode reservation endpoint task](docs/tasks/opencode-reservation-endpoint.md)
 - [Item 2 Quarkus scaffold analysis](docs/analysis/item-2-quarkus-service-scaffold-analysis.md)
@@ -128,21 +128,16 @@ image-registry.openshift-image-registry.svc:5000/coolstore-inventory-dev/coolsto
 
 The pipeline intentionally does not deploy the service in this slice. See [Pipelines-as-Code setup notes](docs/delivery/pipelines-as-code-setup.md) for live cluster prerequisites.
 
-## Legacy Quick Start
+## Legacy Exercise Archive
 
-Current status: this quick start still describes the original Python coding-exercises workspace. Keep it as legacy context until the repository is renamed and reshaped into the Quarkus `coolstore-inventory-service` repository.
+Current status: the original Python exercises have been archived as legacy context under `legacy/python-exercises/`.
 
-1. Open this workspace in OpenShift Dev Spaces
-2. The Continue extension is recommended automatically (`.vscode/extensions.json`)
-3. The Continue config template is copied to `~/.continue/config.yaml` on startup
-4. Edit `~/.continue/config.yaml`:
-   - Replace `YOUR_MAAS_ROUTE` with your MaaS model endpoint (append `/v1`)
-   - Replace `YOUR_API_KEY` with your API token from the RHOAI dashboard
-5. Select **Local Config** in the Continue sidebar dropdown
+Use these only as historical examples. The active demo path starts from the
+Quarkus service root and the Stage 100 Developer Hub / Dev Spaces entry point.
 
 ## Legacy Python Exercises
 
-Three game exercises in `coding-exercises/game_starters/`:
+Three legacy game exercises in `legacy/python-exercises/game_starters/`:
 
 | Exercise | What to Do |
 |----------|-----------|
@@ -150,9 +145,7 @@ Three game exercises in `coding-exercises/game_starters/`:
 | `simple_quiz/` | Follow the prompts — ask Continue to generate a quiz |
 | `word_scramble/` | Follow the prompts — ask Continue to generate a word scramble |
 
-Solutions are in `coding-exercises/game_solutions/`.
-
-The Python exercises should be archived under `legacy/python-exercises/` only after the Quarkus scaffold exists.
+Solutions are in `legacy/python-exercises/game_solutions/`.
 
 ## Getting Your MaaS Endpoint And API Key
 

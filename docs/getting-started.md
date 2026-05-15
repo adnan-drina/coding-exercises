@@ -43,7 +43,7 @@ Before moving to Stage 110, confirm:
 - Developer Hub shows the `Coolstore Inventory Service` component.
 - The component exposes only `Source Repo`, `Dev Spaces`, and `Getting Started`.
 - The Dev Spaces workspace opens.
-- The workspace contains `mca-coolstore` and `coding-exercises`.
+- The workspace contains `mca-coolstore` and `coolstore-inventory-service`.
 - `./mvnw test` passes in this repository.
 - The private MaaS model path is selected for source-code context.
 

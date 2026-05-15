@@ -2,12 +2,12 @@
 
 ## Repository Identity
 
-This repository is being reshaped from `coding-exercises` into the planned `coolstore-inventory-service` repository for the "From Vibe Coding to Agentic Engineering" demo.
+This repository is the `coolstore-inventory-service` repository for the "From Vibe Coding to Agentic Engineering" demo.
 
-Treat this repository as a transition repository until the service rename and first Quarkus scaffold are reviewed:
+Treat this repository as the active Quarkus target-service repository:
 
-- keep the existing Python exercises in place;
-- do not move files into `legacy/python-exercises/` unless the archive item explicitly starts;
+- keep the archived Python exercises under `legacy/python-exercises/`;
+- do not move, edit, or restore legacy Python exercise files unless the archive item explicitly starts;
 - keep delivery assets bounded to `.tekton/`, `Containerfile`, `gitops/`, and `docs/delivery/` until the next delivery item starts;
 - keep the current Quarkus scaffold bounded to inventory read APIs until the reservation endpoint task starts;
 - do not commit secrets, model API keys, kubeconfigs, tokens, or private cluster credentials.
@@ -29,7 +29,7 @@ Important paths:
 - `docs/tasks/` - bounded Continue and OpenCode task packets.
 - `.vscode/config.yaml` - Continue configuration template.
 - `.opencode/opencode.json` - OpenCode configuration template.
-- `legacy/python-exercises/` - planned future archive path only; do not create it until the archive item starts.
+- `legacy/python-exercises/` - archived Python exercise material retained as legacy context.
 
 ## Service Contract
 

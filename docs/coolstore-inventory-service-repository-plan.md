@@ -2,11 +2,11 @@
 
 ## Purpose
 
-This repository is the candidate service repository for the "From Vibe Coding to Agentic Engineering" demo.
+This repository is the service repository for the "From Vibe Coding to Agentic Engineering" demo.
 
 The accepted first-demo shape is a single service repository:
 
-- this repository should be renamed to `coolstore-inventory-service` after the direction is accepted;
+- this repository is named `coolstore-inventory-service`;
 - Quarkus source lives at the repository root;
 - app-local GitOps desired state lives under `gitops/`;
 - Pipelines-as-Code assets live under `.tekton/`;
@@ -14,15 +14,15 @@ The accepted first-demo shape is a single service repository:
 
 ## Current Repository Assessment
 
-The current repository is a useful AI code-assistant workspace shell, but it is not yet the target application.
+The current repository is the target application repository for the first demo.
 
 What exists now:
 
 - OpenShift Dev Spaces `devfile.yaml`;
 - Continue configuration template in `.vscode/config.yaml`;
 - OpenCode configuration template in `.opencode/opencode.json`;
-- Python starter exercises under `coding-exercises/game_starters/`;
-- Python solution examples under `coding-exercises/game_solutions/`.
+- archived Python starter exercises under `legacy/python-exercises/game_starters/`;
+- archived Python solution examples under `legacy/python-exercises/game_solutions/`.
 
 What exists after Item 2:
 
@@ -56,9 +56,9 @@ What exists as planning placeholders after Item 1:
 - `docs/tasks/continue-readme-api-test-plan-alignment.md`;
 - `docs/tasks/opencode-reservation-endpoint.md`.
 
-## Target Repository Responsibility
+## Repository Responsibility
 
-The renamed service repository should own:
+The service repository should own:
 
 - Quarkus source code and tests;
 - service README and TechDocs-ready documentation;
@@ -143,13 +143,13 @@ The service should keep the first implementation bounded to inventory availabili
     └── extensions.json
 ```
 
-The existing Python exercise material should be archived under `legacy/python-exercises/` only after the Quarkus scaffold exists so it does not confuse Developer Hub, OpenCode, or pipeline discovery.
+The existing Python exercise material is archived under `legacy/python-exercises/` so it does not confuse Developer Hub, OpenCode, or pipeline discovery.
 
 ## Iteration Plan
 
 ### Iteration 1: Repository Decision
 
-- Record this repository as the future `coolstore-inventory-service` repository.
+- Record this repository as the `coolstore-inventory-service` repository.
 - Record the single-repo first-demo layout.
 - Keep changes documentation-only until the Quarkus service scaffold begins.
 
@@ -161,7 +161,7 @@ The existing Python exercise material should be archived under `legacy/python-ex
 - Keep Continue and OpenCode configuration, but update the model instructions for Java and Quarkus work.
 - Add the first Continue task for README, API, and test-plan alignment under `docs/tasks/`. Done in Item 1; read/write boundaries added in Item 3.
 - Add the first OpenCode task for the bounded `POST /api/inventory/{itemId}/reservations` feature under `docs/tasks/`. Done in Item 1; read/write boundaries added in Item 3.
-- Archive the current Python exercise files under `legacy/python-exercises/` only after the Quarkus scaffold exists.
+- Archive the current Python exercise files under `legacy/python-exercises/`. Done after the Quarkus scaffold and repository rename.
 
 ### Iteration 2A: Enterprise AI Controls
 
@@ -205,7 +205,7 @@ The existing Python exercise material should be archived under `legacy/python-ex
 
 Item 6 added a documentation-only evidence model under `docs/evidence/`:
 
-- the first evidence scope is the future `coolstore-inventory-service` application image;
+- the first evidence scope is the `coolstore-inventory-service` application image;
 - local Maven build and test commands are recorded as current pre-image evidence;
 - image digest, SBOM, vulnerability scan, signature, provenance, policy gate, promotion, and rollback fields are explicitly pending;
 - no generated SBOM, signature, provenance, scan result, policy engine configuration, live PipelineRun, or live deployment evidence was added.
@@ -246,7 +246,7 @@ oc kustomize gitops/overlays/dev
 
 ## Open Decisions
 
-- Which downstream Dev Spaces, Developer Hub, and README links must be updated after the GitHub repository rename?
+- Which downstream Dev Spaces, Developer Hub, and README links still need live validation after the repository rename?
 - Which exact directory names should hold rollout notes beyond `docs/evidence/`, promotion notes, and rollback evidence?
 - Which concrete OpenShift Developer Catalog / Red Hat PostgreSQL image parameters should the first live deployment use?
 - Which supply-chain controls are advisory for the first demo, and which must block promotion?
